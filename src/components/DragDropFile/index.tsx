@@ -52,6 +52,9 @@ export function DragDropFile() {
             <input ref={inputRef} type="file" accept='.mp3, .wav' name="input-file-upload" className="input-file-upload" multiple={true} onChange={handleChange} />
             <label className="label-file-upload" htmlFor="input-file-upload">
                 <Upload size={64} />
+                <audio src="" controls>
+                    <source src='' id='src' />
+                </audio>
                 <p>{file ? file.name : "Arraste e solte seu arquivo ou"}</p>
                 <button className="upload-button" onClick={onButtonClick}>UPLOAD</button>
             </label>
